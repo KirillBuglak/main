@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AllCars</title>
+</head>
+<body>
+CarList
+<p/>
+<div th:each="auto:${autos}">
+    <a th:href="@{/cars/{what}(what=${auto.getWhat()})}"
+       th:text="${auto.getManufacturer()+','+auto.getBody()}">x</a>
+</div>
+<p/>
+<a href="/fuckeduptwo_war_exploded/cars/new">Add a car?</a>
+</body>
+</html>
