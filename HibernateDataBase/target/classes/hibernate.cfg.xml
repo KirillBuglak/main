@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/dataBase</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="show_sql">true</property>
+
+        <!-- Change update to create or smth else-->
+<property name="hibernate.hbm2ddl.auto">create</property>
+
+        <!-- Uncomment this thing to do mapping by XML files-->
+<!--        <mapping resource="mapping/Auto.hum.xml"></mapping>-->
+<!--        <mapping resource="mapping/Client.hum.xml"></mapping>-->
+<!--        <mapping resource="mapping/Platform.hum.xml"></mapping>-->
+<!--        <mapping resource="mapping/Seller.hum.xml"></mapping>-->
+        <!--Mapping by @Annotations-->
+        <mapping class="entities.Vehicle"></mapping>
+        <mapping class="entities.Client"></mapping>
+        <mapping class="entities.Platform"></mapping>
+        <mapping class="entities.Seller"></mapping>
+        <mapping class="entities.Provider"></mapping>
+        <mapping class="entities.inheretance.Motorcycle"></mapping>
+        <mapping class="entities.inheretance.Truck"></mapping>
+    </session-factory>
+</hibernate-configuration>

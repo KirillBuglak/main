@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Edit Product</title>
+</head>
+
+<body>
+
+CREATE REPOSITORY
+<p/>
+
+<!--FIXME th:action = "@URL OF CONTROLLER"-->
+<form th:method="PATCH" th:action="@{/prod/{id}(id=${editProd.getId()})}" th:object="${editProd}">
+    <label for="l1">Enter product name</label>
+    <input type="text" th:field="*{label}" id="l1">
+    <label for="l2">Enter product email</label>
+    <input type="text" th:field="*{mail}" id="l2">
+    <br/>
+    <input type="submit" value="Update"/>
+</form>
+
+</body>
+
+</html>

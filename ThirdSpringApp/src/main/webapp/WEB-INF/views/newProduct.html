@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>New Product</title>
+</head>
+
+<body>
+
+CREATE REPOSITORY
+<p/>
+
+<!--FIXME th:action = "@URL OF CONTROLLER"-->
+<form th:method="POST" th:action="@{/prod}" th:object="${newProd}">
+    <label for="l1">Enter product name</label>
+    <input type="text" th:field="*{label}" id="l1">
+    <div style="color: red" th:if="${#fields.hasErrors('label')}" th:errors="*{label}">Text</div>
+    <label for="l2">Enter product email</label>
+    <input type="text" th:field="*{mail}" id="l2">
+    <div style="color: red" th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}">Text</div>
+    <br/>
+    <input type="submit" value="Create"/>
+</form>
+
+</body>
+
+</html>

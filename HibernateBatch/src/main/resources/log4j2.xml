@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Appenders>
+        <Console name="Console" target="Console">
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"></PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+                <!--todo:@LEVEL could be DEBUG or ERROR-->
+        <Logger name="org.hibernate" level="debug">
+        <AppenderRef ref="Console"></AppenderRef>
+        </Logger>
+<!--        <Root level="debug">-->
+<!--            <AppenderRef ref="Console"></AppenderRef>-->
+<!--        </Root>-->
+    </Loggers>
+</Configuration>

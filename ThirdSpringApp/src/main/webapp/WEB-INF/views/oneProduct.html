@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>One Product</title>
+</head>
+
+<body>
+
+CREATE REPOSITORY
+<p th:text="${one.getId()}"/>
+<p th:text="${one.getLabel()}"/>
+<p th:text="${one.getMail()}"/>
+<a th:href="@{/prod/{id}/edit(id=${one.getId()})}">Edit?</a>
+<p>You've got some product here</p>
+<form th:method="DELETE" th:action="@{/prod/{id}(id=${one.getId()})}">
+    <br/>
+    <input type="submit" value="Delete"/>
+</form>
+
+</body>
+
+</html>

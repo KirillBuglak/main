@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>All Products</title>
+</head>
+
+<body>
+
+CREATE REPOSITORY
+Ternare operator!
+<div th:each="single : ${all}">
+    <a th:href="@{/prod/{id}(id=${single.getId()})}"
+       th:text="${single.getLabel()+', '+single.getMail()}">will be changed to Thymeleaf thing</a>
+</div>
+
+<p>You've got All products</p>
+<hr/>
+<a th:href="@{/prod/new}">Create new?</a>
+
+</body>
+
+</html>

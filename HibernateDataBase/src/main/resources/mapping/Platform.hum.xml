@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.Platform" table="platform">
+        <id name="platformNumber" type="java.lang.Integer">
+            <column name="number"/>
+            <generator class="identity"></generator>
+        </id>
+        <property name="platformTitle" type="java.lang.String">
+            <column name="title" length="12" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
