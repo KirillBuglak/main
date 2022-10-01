@@ -1,2 +1,3 @@
 Added text
-another addition
+another addition in first branch
+another one in second branch
